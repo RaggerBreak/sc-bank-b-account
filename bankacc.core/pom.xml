@@ -11,7 +11,7 @@
 	<groupId>com.springbank</groupId>
 	<artifactId>bankacc.core.api</artifactId>
 	<version>1.0.0</version>
-	<name>bankacc.core.api</name>
+	<name>bankacc.core</name>
 	<description>Bank Account Core API Project</description>
 	<properties>
 		<java.version>11</java.version>

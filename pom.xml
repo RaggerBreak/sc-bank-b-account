@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>bankacc.core.api</module>
+        <module>bankacc.core</module>
         <module>bankacc.cmd.api</module>
         <module>bankacc.query.api</module>
     </modules>

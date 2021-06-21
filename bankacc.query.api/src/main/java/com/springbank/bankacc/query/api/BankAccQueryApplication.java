@@ -1,13 +1,13 @@
-package com.springbank.bankacc.cmd.api;
+package com.springbank.bankacc.query.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class BankAccQueryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(BankAccQueryApplication.class, args);
 	}
 
 }
