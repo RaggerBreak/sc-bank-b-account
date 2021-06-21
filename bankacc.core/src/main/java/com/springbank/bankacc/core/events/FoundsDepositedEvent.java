@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class FundsDepositedEvent {
+public class FoundsDepositedEvent {
 
     private String id;
     private double amount;
