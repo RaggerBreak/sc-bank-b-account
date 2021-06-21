@@ -6,7 +6,7 @@ import com.springbank.bankacc.cmd.api.commands.OpenAccountCommand;
 import com.springbank.bankacc.cmd.api.commands.WithdrawFundsCommand;
 import com.springbank.bankacc.core.events.AccountClosedEvent;
 import com.springbank.bankacc.core.events.AccountOpenedEvent;
-import com.springbank.bankacc.core.events.FoundsDepositedEvent;
+import com.springbank.bankacc.core.events.FundsDepositedEvent;
 import com.springbank.bankacc.core.events.FundsWithdrawnEvent;
 import lombok.NoArgsConstructor;
 import org.axonframework.commandhandling.CommandHandler;
@@ -50,7 +50,7 @@ public class AccountAggregate {
     @CommandHandler
     public void handle(DepositFundsCommand command) {
         var amount = command.getAmount();
-        var event = FoundsDepositedEvent.builder()
+        var event = FundsDepositedEvent.builder()
                 .id(command.getId())
                 .amount(command.getAmount())
                 .balance(this.balance + amount)
@@ -60,7 +60,7 @@ public class AccountAggregate {
     }
 
     @EventSourcingHandler
-    public void on(FoundsDepositedEvent event) {
+    public void on(FundsDepositedEvent event) {
         this.balance += event.getAmount();
     }
 
