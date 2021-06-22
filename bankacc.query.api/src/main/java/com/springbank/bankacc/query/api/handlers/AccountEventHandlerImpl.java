@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AccountEventHandlerImpl implements AccountEventHandler {
 
-    private AccountRepository accountRepository;
+    private final AccountRepository accountRepository;
 
     @EventHandler
     @Override
